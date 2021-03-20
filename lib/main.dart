@@ -38,17 +38,17 @@ class SuporteState extends State<estadoGlobalful> {
           color: Colors.lightGreen,
           border: Border.all(),
         ),
-        //Como criar uma coluna ?
-        child: Column(
-//CENTRALIZAR VERTICAL
-
-/*//é usada uma propriedade chamada mainAxisAlignment
-
-//ela instancia um método chamando MainAxisAlignment.center que realiza esse trabalho.
- */
-           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("TESTECOLUNA",)],
+        //Como criar uma linha(horizontal)?
+        child: Row(
+          children: [ 
+          Text("TESTELINHA"),
+          Text("TESTELINHA"),
+          Text("TESTELINHA"),
+          ],
         ),
+          
+        
+        
       ),
     );
   }
