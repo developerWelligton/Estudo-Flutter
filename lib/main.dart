@@ -29,8 +29,8 @@ class SuporteState extends State<estadoGlobalful> {
       //body é o conteúdo principal
       
       body: Container(
-       width:double.infinity,
-        height:double.infinity,
+       width: double.infinity,
+       height: double.infinity,
 
 
         //PINTA AREA DE FUNDO :decoration: BoxDecoration
@@ -38,14 +38,52 @@ class SuporteState extends State<estadoGlobalful> {
           color: Colors.lightGreen,
           border: Border.all(),
         ),
-        //Como criar uma linha(horizontal)?
-        child: Row(
-          children: [ 
-          Text("TESTELINHA"),
-          Text("TESTELINHA"),
-          Text("TESTELINHA"),
-          ],
+        //COLUNA
+        child: Column(
+          //Alinhamento é declarado antes de children
+            mainAxisAlignment: MainAxisAlignment.center,
+          children:[
+            Text("TESTE COLUNA"),
+            //LINHA DENTRO DA COLUNA
+                Row(
+
+                  //Alinhamento é declarado antes de children
+
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [ 
+                  
+                  // 1 LINHA 
+                  Container(
+                    width: 70,
+                    height: 70,
+                    color: Colors.black,
+                    margin: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0),
+                    
+                  ),
+                  // 2 LINHA 
+                  Container(
+                    width: 70,
+                    height: 70,
+                    color: Colors.black,
+                    margin: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0)
+                    
+                  ),// 3 LINHA 
+                  Container(
+                    width: 70,
+                    height: 70,
+                    color: Colors.black,
+                    margin: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(20.0)
+                    
+                  ), 
+                  
+                ],)
+          ]
+          
         ),
+        
           
         
         
