@@ -38,8 +38,17 @@ class SuporteState extends State<estadoGlobalful> {
   @override
 //INCRIMENTAR BUILD
   Widget build(BuildContext context) {
-    return
-        //CONTAINER/TELA
-        Container(child: Text("TESTEFUL"));
+    //Scarfold é um Widget que permite um layout de Aplicativo
+    return Scaffold(
+      /*AppBar : Cada componente no flutter é um widget, 
+      então o Appbar também é um widget que contém a barra de ferramentas 
+      no aplicativo flutter
+      */
+      appBar: AppBar(title: Text("Pagina principal")),
+      //body é o conteúdo principal
+      body: Center(
+        child: Text("PrimeiroAPP", style: TextStyle(fontSize: 50)),
+      ),
+    );
   }
 }
