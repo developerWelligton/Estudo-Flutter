@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(estadoGlobalLess()); // runApp
+  runApp(estadoGlobalLess());
 }
 
 class estadoGlobalLess extends StatelessWidget {
@@ -14,36 +14,17 @@ class estadoGlobalLess extends StatelessWidget {
   }
 }
 
-/*
-        MaterialApp
-
-        a.	Theme: Esta propriedade considera a classe 
-        ThemeData como o objeto para descrever o tema do MaterialApp. 
-
-         
-        b.	Home: Esta propriedade considera o widget como o objeto a 
-        ser mostrado na rota padrão do aplicativo
-        
-        */
 class estadoGlobalful extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    //criar outra classe
     return SuporteState();
   }
 }
 
-//<estadoGlobalful> É REFERENCIA
 class SuporteState extends State<estadoGlobalful> {
   @override
-//INCRIMENTAR BUILD
   Widget build(BuildContext context) {
-    //Scarfold é um Widget que permite um layout de Aplicativo
     return Scaffold(
-      /*AppBar : Cada componente no flutter é um widget, 
-      então o Appbar também é um widget que contém a barra de ferramentas 
-      no aplicativo flutter
-      */
       appBar: AppBar(title: Text("Pagina principal")),
       //body é o conteúdo principal
       body: Container(
@@ -56,6 +37,7 @@ class SuporteState extends State<estadoGlobalful> {
           color: Colors.red,
           border: Border.all(),
         ),
+        //Como criar uma coluna ?
         child: Column(
           children: [Text("TESTECOLUNA")],
         ),
