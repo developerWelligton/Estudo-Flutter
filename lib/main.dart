@@ -42,14 +42,26 @@ class SuporteState extends State<estadoGlobalful> {
         child: Column(
           //Alinhamento é declarado antes de children
             mainAxisAlignment: MainAxisAlignment.center,
+            
           children:[
+             
             Text("TESTE COLUNA"),
             //LINHA DENTRO DA COLUNA
+            Container(height: 50,),
                 Row(
 
-                  //Alinhamento é declarado antes de children
+                  //Espaçamento individuais
+                  /*
+                  Espaço entre
+                  mainAxisAlignment:MainAxisAlignment.spaceAround
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  Espaço equivalente e proporcional
+                  mainAxisAlignment:MainAxisAlignment.spaceBetween
+
+                  espaçamento equivalente mas se afasta da extremidade
+                  mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                  */
+                  mainAxisAlignment:MainAxisAlignment.spaceAround,
                   children: [ 
                   
                   // 1 LINHA 
@@ -57,8 +69,7 @@ class SuporteState extends State<estadoGlobalful> {
                     width: 70,
                     height: 70,
                     color: Colors.black,
-                    margin: EdgeInsets.all(20.0),
-                    padding: EdgeInsets.all(20.0),
+                     
                     
                   ),
                   // 2 LINHA 
@@ -66,16 +77,14 @@ class SuporteState extends State<estadoGlobalful> {
                     width: 70,
                     height: 70,
                     color: Colors.black,
-                    margin: EdgeInsets.all(20.0),
-                    padding: EdgeInsets.all(20.0)
+                     
                     
                   ),// 3 LINHA 
                   Container(
                     width: 70,
                     height: 70,
                     color: Colors.black,
-                    margin: EdgeInsets.all(20.0),
-                    padding: EdgeInsets.all(20.0)
+                    
                     
                   ), 
                   
