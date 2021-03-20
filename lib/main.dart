@@ -27,22 +27,30 @@ class SuporteState extends State<estadoGlobalful> {
     return Scaffold(
       appBar: AppBar(title: Text("Pagina principal")),
       //body é o conteúdo principal
+      
       body: Container(
-        width: double.infinity,
-        //double.infinity : PEGA TODA AREA DO APP
-        height: 100,
+       width:double.infinity,
+        height:double.infinity,
+
 
         //PINTA AREA DE FUNDO :decoration: BoxDecoration
         decoration: BoxDecoration(
-          color: Colors.red,
+          color: Colors.lightGreen,
           border: Border.all(),
         ),
         //Como criar uma coluna ?
         child: Column(
-          children: [Text("TESTECOLUNA")],
+//CENTRALIZAR VERTICAL
+
+/*//é usada uma propriedade chamada mainAxisAlignment
+
+//ela instancia um método chamando MainAxisAlignment.center que realiza esse trabalho.
+ */
+           mainAxisAlignment: MainAxisAlignment.center,
+          children: [Text("TESTECOLUNA",)],
         ),
       ),
     );
   }
 }
-//teste
+ 
