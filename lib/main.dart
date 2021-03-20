@@ -46,9 +46,76 @@ class SuporteState extends State<estadoGlobalful> {
       */
       appBar: AppBar(title: Text("Pagina principal")),
       //body é o conteúdo principal
-      body: Center(
-        child: Text("PrimeiroAPP", style: TextStyle(fontSize: 50)),
+      body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.black,
+        child: Align(
+          alignment: Alignment.center,
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.red,
+          ),
+        ),
       ),
     );
   }
 }
+
+/*Modo errado de redenrizar dois Containers
+
+VEJA!
+
+ body: Container(
+          height: 200,
+          width: 200,
+          color: Colors.black,
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.red,
+          ),
+        ),
+*/
+
+/*1ºFORMA
+child:Center(
+NOVO ELEMENTO REDERINZAR
+)
+--
+ body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.black,
+        child: Center(
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.red,
+          ),
+        ),
+      ),
+      */
+
+/*2ºFORMA
+child:Align(
+alignment: Alignment.center,
+
+NOVO ELEMENTO PARA REDERINZAR
+
+)
+  body: Container(
+        height: 200,
+        width: 200,
+        color: Colors.black,
+        child: Align(
+          alignment: Alignment.center,
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.red,
+          ),
+        ),
+      ),
+  */
