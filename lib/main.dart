@@ -38,29 +38,26 @@ class SuporteState extends State<estadoGlobalful> {
           color: Colors.lightGreen,
           border: Border.all(),
         ),
-        //COLUNA
-        child: Column(
-          //Alinhamento é declarado antes de children
-            mainAxisAlignment: MainAxisAlignment.center,
-            
+        //ListView
+        //Substituir Column por Listview
+
+        //É usado quando a tela vai extrapolar
+
+        child: ListView(
+           //Por padrão o scrol vem na vertical
+           
+           //Scroll horizontal
+           // scrollDirection: Axis.horizontal,
           children:[
              
             Text("TESTE COLUNA"),
-            //LINHA DENTRO DA COLUNA
-            Container(height: 50,),
+            //LISTVIEW DENTRO DA LINHA
+            Container(height: 2000,),
+
+
                 Row(
 
-                  //Espaçamento individuais
-                  /*
-                  Espaço entre
-                  mainAxisAlignment:MainAxisAlignment.spaceAround
-
-                  Espaço equivalente e proporcional
-                  mainAxisAlignment:MainAxisAlignment.spaceBetween
-
-                  espaçamento equivalente mas se afasta da extremidade
-                  mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-                  */
+                  
                   mainAxisAlignment:MainAxisAlignment.spaceAround,
                   children: [ 
                   
