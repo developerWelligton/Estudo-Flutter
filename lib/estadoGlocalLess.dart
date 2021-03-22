@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_estudo/login_page.dart';
 
 import 'estadoGlobalful.dart';
 //importa do StatelessWdiget e estadoGlobalful
@@ -7,7 +8,7 @@ class estadoGlobalLess extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: estadoGlobalful(),
+      home: LoginPage(),
     );
   }
 }
