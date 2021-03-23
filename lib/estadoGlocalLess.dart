@@ -8,7 +8,19 @@ class estadoGlobalLess extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: LoginPage(),
+      
+      //routes
+      //definir rota inicial 'initialRoute'
+      //usar a propriedade routes {
+       // '/':(context)=> "rota",
+       // }
+      initialRoute: '/',
+      routes: {
+        '/':(context) =>LoginPage(),
+        '/home':(context) => estadoGlobalful(),
+      },
+      //agora é preciso configurar nos botões as rotas login_page
     );
+    
   }
 }

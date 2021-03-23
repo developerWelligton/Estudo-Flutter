@@ -83,15 +83,10 @@ class _LoginPageState extends State<LoginPage> {
                 if(email == 'developerwelligton@gmail.com' && 
                 senha == '123'){
           
-                 //Navegação entre telas (Manual)---------------------------
-                  //Navigator.of(context)
-                  //método .push(rotas) ou .pushReplacement(rotas)
-                  //Ele aceita uma rota
-                  Navigator.of(context).pushReplacement(
-                    //criar rota
-                    //MaterialPageRoute(builder: (context)=>"sua rota()")
-                    MaterialPageRoute(builder: (context) => estadoGlobalful())
-                  );
+                  //Configurando rotas automáticas
+                  //usa o método pushNamed('rota') ou pushReplacementNamed
+                  //inserir rota
+                  Navigator.of(context).pushReplacementNamed('/home');
                 }else{
                   print('incorreto');
                 }
