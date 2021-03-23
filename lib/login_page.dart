@@ -20,18 +20,22 @@ class _LoginPageState extends State<LoginPage> {
     return Material(
       //tamanho para coluna - 5
       child: SizedBox(
-        width: double.infinity,
-        height: double.infinity,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
           //afastamento da coluna  - 6
           child: Padding(
             padding: const EdgeInsets.all(8.0),
               //coluna - 2
             child: Column(
+              
             //alinhamento para o centro -4 
               mainAxisAlignment: MainAxisAlignment.center, 
               children: [
+                  
+
                 // input- 3 
               TextField(  
+                
                 //COMO ESCUTAR OQ É DIGITADO ? --13
                 //onChanged:()
                 //Ele recebe valores de texto
@@ -90,7 +94,13 @@ class _LoginPageState extends State<LoginPage> {
                 }else{
                   print('incorreto');
                 }
-              }, child: Text('Entrar'))
+              }, child: Text('Entrar')),
+              //Local para inserção das imagens
+                 
+                 Center(
+                   child: Image.network("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/app-chat-logo-icon-design-template-a297748f2c9dca3a319250e40bbe06b7_screen.jpg?ts=1579816267"),
+                    
+                   ),
             ],
         ),
           ),
