@@ -29,15 +29,17 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               
               children: [
-                   //Local para inserção das imagens
+                //*************************************************** 
+
+                   //Local para inserção das imagens locais
                  
                  Container(
                    width: 100,
                    height: 100,
-                   child: Image.network("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/app-chat-logo-icon-design-template-a297748f2c9dca3a319250e40bbe06b7_screen.jpg?ts=1579816267"),
-                    
+                   child: Image.asset("assets/logo1.png")
                    ),
-
+            
+                //*************************************************** 
                 // input- 3 
               TextField(  
                 
