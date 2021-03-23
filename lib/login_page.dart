@@ -28,10 +28,15 @@ class _LoginPageState extends State<LoginPage> {
               //coluna - 2
             child: Column(
               
-            //alinhamento para o centro -4 
-              mainAxisAlignment: MainAxisAlignment.center, 
               children: [
-                  
+                   //Local para inserção das imagens
+                 
+                 Container(
+                   width: 100,
+                   height: 100,
+                   child: Image.network("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/app-chat-logo-icon-design-template-a297748f2c9dca3a319250e40bbe06b7_screen.jpg?ts=1579816267"),
+                    
+                   ),
 
                 // input- 3 
               TextField(  
@@ -95,12 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                   print('incorreto');
                 }
               }, child: Text('Entrar')),
-              //Local para inserção das imagens
-                 
-                 Center(
-                   child: Image.network("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/app-chat-logo-icon-design-template-a297748f2c9dca3a319250e40bbe06b7_screen.jpg?ts=1579816267"),
-                    
-                   ),
+              
             ],
         ),
           ),
