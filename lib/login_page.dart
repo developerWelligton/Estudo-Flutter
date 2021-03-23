@@ -1,4 +1,7 @@
+ 
+
 import 'package:flutter/material.dart';
+import 'package:flutter_app_estudo/estadoGlobalful.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -12,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
 
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {//-******** context *********
     //Material -1
     return Material(
       //tamanho para coluna - 5
@@ -79,7 +82,16 @@ class _LoginPageState extends State<LoginPage> {
               RaisedButton(onPressed: (){
                 if(email == 'developerwelligton@gmail.com' && 
                 senha == '123'){
-                  print("correto");
+          
+                 //Navegação entre telas (Manual)---------------------------
+                  //Navigator.of(context)
+                  //método .push(rotas) ou .pushReplacement(rotas)
+                  //Ele aceita uma rota
+                  Navigator.of(context).pushReplacement(
+                    //criar rota
+                    //MaterialPageRoute(builder: (context)=>"sua rota()")
+                    MaterialPageRoute(builder: (context) => estadoGlobalful())
+                  );
                 }else{
                   print('incorreto');
                 }
