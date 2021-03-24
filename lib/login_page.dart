@@ -12,11 +12,8 @@ class _LoginPageState extends State<LoginPage> {
   //PARA ACONTECER O LOGIN - 14 
     String email = '';
     String senha = '';
-
-
-  @override
-  Widget build(BuildContext context) {//-******** context *********
-    //Material -1
+  
+  Widget _body(){
     return Material(
       //tamanho para coluna - 5
       child: SizedBox(
@@ -38,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                    height: 100,
                    child: Image.asset("assets/logo1.png")
                    ),
-            
+
                 //*************************************************** 
                 // input- 3 
               TextField(  
@@ -103,9 +100,26 @@ class _LoginPageState extends State<LoginPage> {
                 }
               }, child: Text('Entrar')),
               
-            ],
-        ),
+             ],
+           ),
           ),
+        ),
+      );
+
+    }
+  @override
+  Widget build(BuildContext context) { 
+    return Scaffold(
+      //Stack : Ele empilha todos os widgets
+      
+      body: Stack(
+        children: [
+          /*BACKGROUND PODENDO SER CORES OU IMAGENS
+          Container(
+            color: Colors.red),
+            */
+          _body()
+        ],
       )
     );
   }
